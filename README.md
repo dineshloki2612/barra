@@ -40,7 +40,9 @@ go get github.com/zicare/barra
 
 
 
-## Example: Controller
+## Example
+
+**Controller**
 ```
 type SongController struct {
     crud ctrl.CrudController
@@ -51,7 +53,7 @@ func (bc SongController) Fetch(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-## Example: Model
+**Model**
 ```
 type Song struct {
 	mysql.Table
@@ -62,7 +64,7 @@ type Song struct {
 }
 ```
 
-## Example: Fetch
+**Calling fetch on song model with some filters and dig**
 
 *GET /songs?eq=album_id|2&dig=album&limit=2* will return:
 
@@ -120,4 +122,4 @@ With tags in your model, you get filtering, pagination, dig relations, validatio
 
 ## Status
 
-Barra is experimental. The API may evolve as core interfaces are refined.
+Barra is under development. The API may evolve as core interfaces are refined.
