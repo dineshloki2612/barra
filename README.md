@@ -26,11 +26,11 @@ go get github.com/zicare/barra
 
 - Controllers — Generic controllers you embed in your code:
 
-- CrudController — CRUD for any model
+   - CrudController — CRUD for any model
 
-- JwtController — Issues JSON Web Tokens
+   - JwtController — Issues JSON Web Tokens
 
-- PinController — Email-based PINs for password resets / onboarding
+   - PinController — Email-based PINs for password resets / onboarding
 
 - Filters — Query parameters like *?eq=status|active&like=name|%john%&in=role|admin,officer* are automatically converted into SQL conditions. See the operator reference below.
 
@@ -59,12 +59,6 @@ type Song struct {
 	Title        string    `db:"title"            json:"title"`
 	AlbumID      int64     `db:"album_id"         json:"album_id"`
 	Album        *Album    `db:"-"                json:"album,omitempty"          fk:"album_id"`
-}
-
-type Album struct {
-	mysql.Table
-	AlbumID      int64     `db:"album_id"        json:"album_id"                  pk:"1"`
-	Title        string    `db:"title"           json:"title"`
 }
 ```
 
@@ -126,4 +120,4 @@ With tags in your model, you get filtering, pagination, dig relations, validatio
 
 ## Status
 
-Barra is experimental. The API may evolve as core interfaces are refined — feedback welcome.
+Barra is experimental. The API may evolve as core interfaces are refined.
