@@ -32,7 +32,7 @@ go get github.com/zicare/barra
 
    - PinController — Email-based PINs for password resets / onboarding
 
-- Filters — Query parameters like *?eq=status|active&like=name|%john%&in=role|admin,officer* are automatically converted into SQL conditions. See the operator reference below.
+- Filters — Query parameters like eq=status|active&like=name|%john%&in=role|admin,officer are automatically converted into SQL conditions.
 
 - Dig (Relations) — Load related data by marking fields with tags. See example below.
 
